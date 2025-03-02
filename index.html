@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harder Styles Musiksammlung</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px 0;
+      background: linear-gradient(135deg, #4a0072, #9c27b0);
+      border-radius: 10px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+    
+    .subheader {
+      font-style: italic;
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+    
+    .genre-section {
+      margin-bottom: 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .genre-header {
+      padding: 15px 20px;
+      font-size: 1.5rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .genre-content {
+      padding: 20px;
+      background-color: #1e1e1e;
+    }
+    
+    .track {
+      display: flex;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #333;
+    }
+    
+    .track:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    
+    .track-info {
+      flex: 1;
+    }
+    
+    .track-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .track-artist {
+      opacity: 0.8;
+      margin-bottom: 10px;
+    }
+    
+    .track-links a {
+      display: inline-block;
+      margin-right: 15px;
+      padding: 8px 15px;
+      border-radius: 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 0.9rem;
+      transition: transform 0.2s;
+    }
+    
+    .track-links a:hover {
+      transform: scale(1.05);
+    }
+    
+    .spotify-btn {
+      background-color: #1DB954;
+    }
+    
+    /* Genre-specific colors */
+    .melodic-hardstyle { background-color: #FFA000; }
+    .hardstyle { background-color: #b71c1c; }
+    .hardcore { background-color: #311B92; }
+    .rawstyle { background-color: #004D40; }
+    .frenchcore { background-color: #0D47A1; }
+    .xtra-raw { background-color: #BF360C; }
+    .uptempo { background-color: #6A1B9A; }
+    .deutscher-krach { background-color: #5D4037; }
+    .pieps { background-color: #E91E63; }
+    
+    .track-player {
+      width: 100%;
+      height: 80px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+      opacity: 0.7;
+    }
+    
+    @media (max-width: 768px) {
+      .track {
+        flex-direction: column;
+      }
+      
+      .track-player {
+        margin-top: 15px;
+      }
+    }
+
+    /* LIKE BUTTON STYLING */
+    .like-btn {
+      background-color: #2196F3; /* Blau */
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      transition: transform 0.2s;
+    }
+
+    .like-btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* Falls du einheitliches CSS für "Disabled" willst */
+    .like-btn:disabled {
+      background-color: #666;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>HARDER STYLES</h1>
+      <div class="subheader">Eine kuratierte Sammlung der besten Tracks</div>
+    </header>
+    
+    <!-- MELODIC HARDSTYLE (4 Tracks) -->
+    <div class="genre-section">
+      <div class="genre-header melodic-hardstyle">
+        MELODIC HARDSTYLE
+      </div>
+      <div class="genre-content">
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Toss A Coin To Your Witcher</div>
+            <div class="track-artist">Coone, Da Tweekaz, Hard Driver, Bram Boender</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/2jkoanGKXN9I3gfeYo4aph?si=fa03f27bd0514c38" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="TossACoinToYourWitcher">Like</button>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Imaginary (Edit)</div>
+            <div class="track-artist">Brennan Heart, Jonathan Mendelsohn</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/2TgDK4TC5KsywTYafAE4Gd?si=3a5eab65bd2f493f" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="ImaginaryEdit">Like</button>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Take Me Away</div>
+            <div class="track-artist">Da Tweekaz, Sound Rush, Ruby Prophet</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/3bHcQsPXda18ri3WAO1xIs?si=338486622c284ea8" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="TakeMeAway">Like</button>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Sound Of The Blade</div>
+            <div class="track-artist">Brennan Heart, Blademasterz</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/1baZhM2jNlihmXJEWSjdlG?si=d80dcdb67e664a73" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="SoundOfTheBlade">Like</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- HARDSTYLE (4 Tracks) -->
+    <div class="genre-section">
+      <div class="genre-header hardstyle">
+        HARDSTYLE
+      </div>
+      <div class="genre-content">
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Before I Wake</div>
+            <div class="track-artist">Headhunterz, KELTEK</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/1E98GLyca4lWhGg0UJjIWE?si=bcb9a2d98f0b4644" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="BeforeIWake">Like</button>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">HALO</div>
+            <div class="track-artist">Sub Zero Project</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/4R7k9w4XBSYSUhlmXFr4xm?si=a033c77b720b4ece" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="HALO">Like</button>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Step Into The Light</div>
+            <div class="track-artist">Sound Rush, Atmozfears</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/0CUeNPfczZYcb0IdV1CeqL?si=d32f439386634c9d" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="StepIntoTheLight">Like</button>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">SAVE ME</div>
+            <div class="track-artist">Sickmode, Rooler, Krowdexx</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/15YYQC2n1LJblmAoN8F5ke?si=b24bd915fce04bf8" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="SAVEME">Like</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- HARDCORE (3 Tracks) -->
+    <div class="genre-section">
+      <div class="genre-header hardcore">
+        HARDCORE
+      </div>
+      <div class="genre-content">
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Turbo (D-Fence Decade Extended Mix)</div>
+            <div class="track-artist">DJ Paul Elstak, New Kids</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/6PiBSFJqOKVByjQJEI0tGm?si=037c5e8a49b542aa" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="Turbo">Like</button>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Temple Of Resonance (Official Masters Of Hardcore 2024 Anthem)</div>
+            <div class="track-artist">Angerfist, Nolz, Tha Watcher</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/7gZEZc68gYpSPK2GvPPChc?si=262d0e7789c64845" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="TempleOfResonance">Like</button>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">The Core Citadel (Official Dominator 2024 Anthem)</div>
+            <div class="track-artist">N-Vitral, Tha Watcher</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/61MnaF1mjRxrEFVgOZoVUz?si=70a0992300074fdf" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="TheCoreCitadel">Like</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- RAWSTYLE (3 Tracks) -->
+    <div class="genre-section">
+      <div class="genre-header rawstyle">
+        RAWSTYLE
+      </div>
+      <div class="genre-content">
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Through My Veins</div>
+            <div class="track-artist">D-Sturb, E-Life, Meryll</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/4jTtUjgUqHkwVtlWPuXQDj?si=8756365dc3db4dd8" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="ThroughMyVeins">Like</button>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Burning Down</div>
+            <div class="track-artist">Dual Damage</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/1Es2uLFDtB3xHrjv7V2H9J?si=56fc0ebd287d44bb" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="BurningDown">Like</button>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Bonkerz (The Straikerz Remix)</div>
+            <div class="track-artist">Rebelion</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/7wOlSIcT9AVUIcSJiYPcQf?si=0c7ec61707884698" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="BonkerzRemix">Like</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FRENCHCORE (3 Tracks) -->
+    <div class="genre-section">
+      <div class="genre-header frenchcore">
+        FRENCHCORE
+      </div>
+      <div class="genre-content">
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Symphony Of Life</div>
+            <div class="track-artist">Sefa, D-Block & S-te-fan</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/1v5FsB6y2kNrLVjtQuuKE8?si=689d7df13883407d" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="SymphonyOfLife">Like</button>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Trip to Valhalla</div>
+            <div class="track-artist">Dr. Peacock</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/58ykpDVW9C0hArSAXqiKpR?si=e9c2b233f5d048fa" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="TripToValhalla">Like</button>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Trip to Serbia</div>
+            <div class="track-artist">Sefa, Dr. Peacock</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/093c9gCeDeLVuu6p52IJyN?si=fe3e7491544e432a" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="TripToSerbia">Like</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- XTRA RAW (2 Tracks) - "Malle Hardstyle" -->
+    <div class="genre-section">
+      <div class="genre-header xtra-raw">
+        Malle Hardstyle
+      </div>
+      <div class="genre-content">
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">ANNE KAFFEEKANNE (Harris & Ford Remix)</div>
+            <div class="track-artist">TIM PLVNK</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/4vREzZ6pOOsCxhHKy4hSRc?si=6dc43c31eaf64ea2" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="AnneKaffeekanneRemix">Like</button>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Wackelkontakt</div>
+            <div class="track-artist">Oimara</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/2eAU0Oij4NkduxThjzhCI6?si=1d2632e486f94d22" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="Wackelkontakt">Like</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- UPTEMPO (2 Tracks) -->
+    <div class="genre-section">
+      <div class="genre-header uptempo">
+        UPTEMPO
+      </div>
+      <div class="genre-content">
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">ADHD</div>
+            <div class="track-artist">N-Vitral, Bombsquad, Dimitri K</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/4DKSnd7K0T9C7xnhIfeRnB?si=3cc200985c584f36" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="ADHD">Like</button>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">IMMA SYCO</div>
+            <div class="track-artist">Slaughterhouse, N-Vitral, Deadly Guns</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/2uw7qGMz1so9ubfH71vNqD?si=fd48d8218d774437" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="ImmaSyco">Like</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- DEUTSCHER KRACH (2 Tracks) -->
+    <div class="genre-section">
+      <div class="genre-header deutscher-krach">
+        DEUTSCHER KRACH
+      </div>
+      <div class="genre-content">
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">All the Things She Said (Noiseflow & Triplex X Remix)</div>
+            <div class="track-artist">DJ Gollum, Scarlet</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/4WGIYb6FewZn8IHH2Lnk6b?si=a140d2d58efc4007" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="AllTheThingsSheSaidRemix">Like</button>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Pyrotechnik</div>
+            <div class="track-artist">Noiseflow</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/0vzlxoXLY92wTGoPhSYrY8?si=d8872b0ecbe24808" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="Pyrotechnik">Like</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- PIEPS (1 Track) -->
+    <div class="genre-section">
+      <div class="genre-header pieps">
+        PIEPS
+      </div>
+      <div class="genre-content">
+        <div class="track">
+          <div class="track-info">
+            <div class="track-title">Greazy Unicorn</div>
+            <div class="track-artist">GPF, Unicorn On Ketamine</div>
+            <div class="track-links">
+              <a href="https://open.spotify.com/track/2iTCEXQmtIb0LukfnTn9X4?si=545d1877e52c4df1" class="spotify-btn" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <button class="like-btn" data-track-id="GreazyUnicorn">Like</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WICHTIG: COMPAT-SDKs, damit .database() und .transaction() problemlos gehen -->
+  <script src="https://www.gstatic.com/firebasejs/9.20.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.20.0/firebase-database-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyC4tOkK1Yq4x3dU73VZvugopQ_2ESEpAA0",
+      authDomain: "hardstylelikes.firebaseapp.com",
+      databaseURL: "https://hardstylelikes-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "hardstylelikes",
+      storageBucket: "hardstylelikes.firebasestorage.app",
+      messagingSenderId: "830932860198",
+      appId: "1:830932860198:web:ca62bc81e36ef1738c95e7"
+    };
+
+    // Firebase initialisieren (COMPAT)
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const likeButtons = document.querySelectorAll(".like-btn");
+
+      likeButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          const trackId = button.getAttribute("data-track-id");
+          const likeRef = database.ref("likes/" + trackId);
+
+          // Transaction erhöht "count" um 1
+          likeRef.transaction(currentData => {
+            if (currentData) {
+              currentData.count = (currentData.count || 0) + 1;
+            } else {
+              currentData = { count: 1 };
+            }
+            return currentData;
+          })
+          .then(() => {
+            // Statt alert -> Button nach Klick deaktivieren & grau färben
+            button.disabled = true;
+            button.style.backgroundColor = "#666";
+            button.innerText = "Liked";
+          })
+          .catch(error => {
+            console.error("Fehler beim Liken:", error);
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
